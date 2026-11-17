@@ -1,0 +1,67 @@
+{
+    "project_name": "AI-Based Vegetable Crop Production Analysis",
+    "created_at": "2026-11-17T15:02:51.980965",
+    "dataset": "Production_of_Important_Vegetable_crops_In_Tonnes_2019_20.csv",
+    "dataset_year": "2019-20",
+    "target_variable": "Tomato",
+    "target_unit": "tonnes",
+    "feature_columns": [
+        "Potato",
+        "Brinjal",
+        "Beans",
+        "Cluster Beans",
+        "Onion",
+        "Green chillies",
+        "Total Leafy Vegetables",
+        "Total Guard Variety Vegetables"
+    ],
+    "dataset_information": {
+        "valid_records": 224,
+        "feature_count": 8,
+        "train_samples": 179,
+        "test_samples": 45
+    },
+    "model_performance": {
+        "Random Forest": {
+            "MAE": 24490.279587473902,
+            "MSE": 4482056231.074926,
+            "RMSE": 66948.16077440012,
+            "R2": -4.789598437986369
+        },
+        "Neural Network": {
+            "MAE": 14015.940501997206,
+            "MSE": 970527038.8990933,
+            "RMSE": 31153.282955398026,
+            "R2": -0.25365714724336175
+        }
+    },
+    "best_model_by_test_rmse": "Neural Network",
+    "random_forest_feature_importance": {
+        "Potato": 0.14114375337273338,
+        "Brinjal": 0.2459818297352146,
+        "Beans": 0.32873894133723597,
+        "Cluster Beans": 0.11904590811074922,
+        "Onion": 0.03783588641236976,
+        "Green chillies": 0.03794371554951599,
+        "Total Leafy Vegetables": 0.03594911972514877,
+        "Total Guard Variety Vegetables": 0.053360845757032344
+    },
+    "neural_network_training": {
+        "epochs_completed": 27,
+        "final_training_loss": 9.143631935119629,
+        "final_validation_loss": 3156.343994140625
+    },
+    "saved_files": {
+        "h5": "vegetable_model.h5",
+        "pkl": "vegetable_model.pkl",
+        "scaler": "vegetable_scaler.pkl",
+        "imputer": "vegetable_imputer.pkl",
+        "yaml": "config.yaml"
+    },
+    "limitations": [
+        "Single-year production data",
+        "No future-year forecasting",
+        "Predictions rely on other crop production values",
+        "Results are not causal agricultural recommendations"
+    ]
+}

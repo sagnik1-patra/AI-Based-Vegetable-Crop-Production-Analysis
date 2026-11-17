@@ -1,0 +1,33 @@
+project_name: AI-Based Vegetable Crop Production Analysis
+optimization: Artificial Immune System
+algorithm: Clonal Selection Algorithm
+target: Tomato
+target_unit: tonnes
+dataset: Production_of_Important_Vegetable_crops_In_Tonnes_2019_20.csv
+selected_features:
+- Potato
+- Brinjal
+- Beans
+ais_parameters:
+  population_size: 12
+  generations: 12
+  clones_per_parent: 4
+  elite_count: 4
+  mutation_rate: 0.25
+best_hyperparameters:
+  n_estimators: 174
+  max_depth: 12
+  min_samples_split: 2
+  min_samples_leaf: 1
+  max_features: 0.6058071584638173
+  feature_mask:
+  - 1
+  - 1
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+best_cv_rmse: 120533.36486376618
+random_state: 42

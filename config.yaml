@@ -1,0 +1,49 @@
+project:
+  name: AI-Based Vegetable Crop Production Analysis
+  dataset: Production_of_Important_Vegetable_crops_In_Tonnes_2019_20.csv
+  year: 2019-20
+  task: Regression
+  target: Tomato
+  target_unit: tonnes
+data:
+  total_valid_records: 224
+  training_records: 179
+  testing_records: 45
+  features:
+  - Potato
+  - Brinjal
+  - Beans
+  - Cluster Beans
+  - Onion
+  - Green chillies
+  - Total Leafy Vegetables
+  - Total Guard Variety Vegetables
+  test_size: 0.2
+  random_state: 42
+preprocessing:
+  missing_value_strategy: median
+  scaling: StandardScaler
+  target_transformation: log1p_for_neural_network
+  negative_production: treated_as_missing
+random_forest:
+  n_estimators: 200
+  max_depth: 10
+  min_samples_leaf: 2
+  random_state: 42
+neural_network:
+  hidden_layers:
+  - 64
+  - 32
+  - 16
+  activation: relu
+  optimizer: adam
+  learning_rate: 0.001
+  epochs: 200
+  batch_size: 16
+  early_stopping_patience: 20
+output_files:
+  neural_network: vegetable_model.h5
+  random_forest: vegetable_model.pkl
+  scaler: vegetable_scaler.pkl
+  imputer: vegetable_imputer.pkl
+  metadata: model_metadata.json

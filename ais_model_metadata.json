@@ -1,0 +1,66 @@
+{
+    "project": "AI-Based Vegetable Crop Production Analysis",
+    "optimization_method": "AIS-CLONALG",
+    "created_at": "2026-11-17T16:36:59.228219",
+    "target": "Tomato",
+    "selected_features": [
+        "Potato",
+        "Brinjal",
+        "Beans"
+    ],
+    "best_antibody": {
+        "n_estimators": 174,
+        "max_depth": 12,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.6058071584638173,
+        "feature_mask": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "cross_validation_rmse": 120533.36486376618,
+    "model_performance": {
+        "AIS-Random Forest": {
+            "MAE": 9494.516495080765,
+            "MSE": 286706508.9410644,
+            "RMSE": 16932.410015737998,
+            "R2": 0.6296531166170543
+        },
+        "AIS-Guided Neural Network": {
+            "MAE": 14027.68789460924,
+            "MSE": 970910942.6527705,
+            "RMSE": 31159.443875858415,
+            "R2": -0.25415304654895654
+        }
+    },
+    "best_model": "AIS-Random Forest",
+    "convergence_rmse": [
+        123916.19870048838,
+        121013.88325430924,
+        120860.6614769149,
+        120860.6614769149,
+        120636.62058529595,
+        120636.62058529595,
+        120636.62058529595,
+        120636.62058529595,
+        120601.39657388591,
+        120533.36486376618,
+        120533.36486376618,
+        120533.36486376618
+    ],
+    "training_samples": 179,
+    "testing_samples": 45,
+    "limitations": [
+        "Single-year production data",
+        "No temporal forecasting",
+        "AIS optimizes Random Forest and feature selection",
+        "Neural network uses AIS-selected features"
+    ]
+}

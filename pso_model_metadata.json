@@ -1,0 +1,99 @@
+{
+    "project": "AI-Based Vegetable Crop Production Analysis",
+    "optimization": "PSO",
+    "created_at": "2026-11-17T16:41:41.202449",
+    "dataset": "Production_of_Important_Vegetable_crops_In_Tonnes_2019_20.csv",
+    "target": "Tomato",
+    "target_unit": "tonnes",
+    "selected_features": [
+        "Potato",
+        "Brinjal",
+        "Beans",
+        "Total Guard Variety Vegetables"
+    ],
+    "best_parameters": {
+        "n_estimators": 88,
+        "max_depth": 13,
+        "min_samples_split": 7,
+        "min_samples_leaf": 1,
+        "max_features": 0.4186277210155034,
+        "random_state": 42,
+        "n_jobs": 1
+    },
+    "best_cv_rmse": 120876.447729681,
+    "validation_metrics": {
+        "PSO-Random Forest": {
+            "MAE": 13194.47295682858,
+            "MSE": 1574218485.2776794,
+            "RMSE": 39676.42228424432,
+            "R2": 0.1310243088501989
+        },
+        "PSO-Guided Neural Network": {
+            "MAE": 20220.968130217658,
+            "MSE": 2768704135.0761547,
+            "RMSE": 52618.47712615935,
+            "R2": -0.5283371475229033
+        }
+    },
+    "test_metrics": {
+        "PSO-Random Forest": {
+            "MAE": 8551.139844699252,
+            "MSE": 264020177.01825792,
+            "RMSE": 16248.697702223952,
+            "R2": 0.6589576913685451
+        },
+        "PSO-Guided Neural Network": {
+            "MAE": 41792.455246480306,
+            "MSE": 36741774137.067474,
+            "RMSE": 191681.43920856676,
+            "R2": -46.46038585548879
+        }
+    },
+    "selected_model": "PSO-Random Forest",
+    "convergence_history": [
+        123191.84970706124,
+        123191.84970706124,
+        121957.53260894418,
+        121266.71812555578,
+        121266.71812555578,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681,
+        120876.447729681
+    ],
+    "mean_fitness_history": [
+        147342.88949632735,
+        145933.757139715,
+        139037.41128329848,
+        133481.4323826191,
+        130199.4309952736,
+        133997.50444670042,
+        138494.67804286774,
+        132951.84220265847,
+        125144.96121656425,
+        129187.63804193346,
+        130790.59872366344,
+        139347.59778715242,
+        134467.8332933004,
+        122879.55198926409,
+        125017.21493734092,
+        128945.20574222556
+    ],
+    "training_samples": 179,
+    "testing_samples": 45,
+    "neural_network_epochs": 189,
+    "limitations": [
+        "Single-year crop production dataset",
+        "Not a future-year forecasting model",
+        "PSO optimizes RF parameters and feature selection",
+        "Neural network uses PSO-selected features",
+        "Regional production is not equivalent to yield per hectare"
+    ]
+}
